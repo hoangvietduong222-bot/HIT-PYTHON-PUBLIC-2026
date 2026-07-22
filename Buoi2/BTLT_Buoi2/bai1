@@ -1,0 +1,12 @@
+## Bài tập 1: Nhập vào từ bàn phím hai số nguyên a, b. 
+## Tính và in ra màn hình tổng, hiệu, tích, thương của a và b với mỗi kết quả in trên 1 dòng;
+## kết quả của thương là số thực có độ chính xác 3 chữ số hàng thập phân.
+
+a = int(input("Nhap so nguyen a: "))
+b = int(input("Nhap so nguyen b: "))
+
+print("Tong: ", a+b)
+print("Hieu: ", a-b)
+print("Tich: ", a*b)
+if b != 0:
+    print(f"Thuong: {(a/b):.3f}")

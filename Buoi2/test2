@@ -1,3 +1,0 @@
-# Kiểm tra một biến có thuộc một kiểu nào đó hay không
-a = 10
-print(isinstance(a, int))

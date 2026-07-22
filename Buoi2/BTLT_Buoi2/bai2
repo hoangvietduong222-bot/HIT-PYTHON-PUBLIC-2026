@@ -1,0 +1,10 @@
+## Bài tập 2: Nhập vào tọa độ của hai điểm A(x1, y1) và B(x2, y2). 
+## Tính và in ra khoảng cách Euclidean giữa A và B theo công thức:
+
+import math as m
+x1 = float(input("Nhap x1: "))
+y1 = float(input("Nhap y1: "))
+x2 = float(input("Nhap x2: "))
+y2 = float(input("Nhap y2: "))
+d = m.sqrt((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2))
+print(f"khoang cach giua a va la: {(d):.3f}")
