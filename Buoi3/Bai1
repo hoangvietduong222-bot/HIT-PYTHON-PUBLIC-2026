@@ -1,0 +1,46 @@
+n = int(input("Nhập số lượng sinh viên: "))
+diem=[]
+for i in range(n):
+    while True:
+        x = float(input("Nhập điểm sinh viên: " ))
+        if 0 <= x <= 10:
+            diem.append(x)
+            break
+        else:
+            print("Điểm ko hợp lệ! Nhập lại")
+
+tong = 0
+for x in diem:
+    tong += x
+    dtb = tong / n
+
+lon_nhat = diem[0]
+nho_nhat = diem[0]
+
+for x in diem:
+        if x > lon_nhat:
+            lon_nhat = x
+        if x < nho_nhat:
+            nho_nhat = x
+
+diem_lon_hon_dtb = []
+for x in diem:
+        if x > dtb:
+            diem_lon_hon_dtb.append(x)
+
+co_diem_10 = False
+for x in diem:
+     if x==10:
+          co_diem_10 = True
+          break
+     
+print("Danh sách điểm:", diem)
+print("Điểm trung bình:", dtb)
+print("Điểm lớn nhất:", lon_nhat)
+print("Điểm nhỏ nhất:", nho_nhat)
+print("Các điểm lớn hơn điểm trung bình:", diem_lon_hon_dtb)
+
+if co_diem_10:
+    print("Có sinh viên đạt điểm 10.")
+else:
+    print("Không có sinh viên đạt điểm 10.")

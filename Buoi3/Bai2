@@ -1,0 +1,53 @@
+n = int(input("Nhap số lượng sản phẩm: "))
+
+ds = []
+
+for i in range(n):
+    while True:
+        ma = input("Nhập mã sản phẩm: ")
+        trung = False
+        for sp in ds:
+            if sp[0] == ma:
+                trung = True
+                break
+
+    if trung:
+        print("Mã sản phẩm đã tồn tại! Nhập lại.")
+    else:
+        break
+
+ten = input("Nhập tên sản phẩm")
+
+while True:
+    gia = float(input("Nhập đơn giá: "))
+    if gia > 0:
+        break
+    else:
+        print("Đơn giá phải lớn hơn 0")
+while True:
+    sl = int(input("Nhập số lượng: "))
+    if sl >= 0:
+        break
+    else: 
+        print("Số lượng ko được âm! ")
+
+sp = (ma, ten, gia, sl)
+ds.append(sp)
+
+print("\n Thành tiền từng sản phẩm: ")
+for sp in ds:
+    thanh_tien = sp[2] * sp[3]
+    print(sp[1], ":", thanh_tien)
+
+max_sp = ds[0]
+max_gt = ds[0][2] * ds[0][3]
+
+for sp in ds:
+    gt = sp[2] * sp[3]
+    if gt > max_gt:
+        max_gt = gt
+        max_sp = sp
+print("\n Sản phẩm có giá trị lớn nhất")
+print(max_sp)
+
+print("\n Sản phẩm sắp hết hàng ")
